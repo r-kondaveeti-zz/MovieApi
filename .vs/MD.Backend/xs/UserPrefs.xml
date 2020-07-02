@@ -1,0 +1,40 @@
+﻿<Properties StartupConfiguration="{8ABBB12C-3775-4B5F-95F5-EF2CDA9608D1}|Default">
+  <MonoDevelop.Ide.ItemProperties.MD.Backend.Api.EnglishMovies PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.ItemProperties.MD.Backend.Api.IndianMovies PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MD.Backend.Api.EnglishMovies/Services/YtsService.cs">
+    <Files>
+      <File FileName="MD.Backend.Api.EnglishMovies/Controllers/MoviesController.cs" Line="38" Column="2" />
+      <File FileName="MD.Backend.Api.EnglishMovies/Services/YtsService.cs" Line="7" Column="7" />
+      <File FileName="MD.Backend.Api.EnglishMovies/Interfaces/IYtsService.cs" />
+      <File FileName="MD.Backend.Api.EnglishMovies/Startup.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MD.Backend" expanded="True">
+            <Node name="MD.Backend.Api.EnglishMovies" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Interfaces" expanded="True" />
+              <Node name="Services" expanded="True">
+                <Node name="YtsService.cs" selected="True" />
+              </Node>
+            </Node>
+            <Node name="MD.Backend.Api.IndianMovies" expanded="True">
+              <Node name="Controllers" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.MD.Backend.Api.EnglishMovies.Tests FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <Debugger.DebugSourceFolders />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations>
+    <MultiItemSolutionRunConfiguration Id="Multiple Projects" Name="Multiple Projects" />
+  </MultiItemStartupConfigurations>
+</Properties>
