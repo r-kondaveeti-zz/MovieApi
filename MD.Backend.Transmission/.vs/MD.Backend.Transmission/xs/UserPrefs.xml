@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{CDB8060B-1976-4648-A8E7-5A05E7B87813}|Default">
+  <MonoDevelop.Ide.ItemProperties.MD.Backend.Transmission PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Db/TorrentDbContext.cs">
+    <Files>
+      <File FileName="Logic/TorrentLogic.cs" Line="56" Column="1" />
+      <File FileName="IEngine/ITorrent.cs" />
+      <File FileName="Db/TorrentDbContext.cs" Line="18" Column="6" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MD.Backend.Transmission" expanded="True">
+            <Node name="MD.Backend.Transmission" expanded="True">
+              <Node name="Db" expanded="True">
+                <Node name="TorrentDbContext.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

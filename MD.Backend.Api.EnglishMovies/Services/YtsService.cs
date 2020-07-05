@@ -17,18 +17,23 @@ namespace MD.Backend.Api.EnglishMovies.Services
 
         public async Task<IList<Models.Movie>> GetMoviesUsingGenreAsync(string genre, int pageNumber)
         {
-            var response = _client.GetStreamAsync($"api/v2/list_movies.json?genre={genre}&page={pageNumber}");
-            var repository = JsonSerializer.DeserializeAsync<Repository>(await response).Result;
-
-            var fromMovies = repository.Data.Movies;
-            var toMovies = new List<Models.Movie>();
-
-            foreach(var fromMovie in fromMovies)
+            var response = await _client.GetAsync($"api/v2/list_movies.json?genre={genre}&page={pageNumber}");
+            if(response.IsSuccessStatusCode)
             {
-                toMovies.Add(Utility.Converter.ConvertToResponse(fromMovie));
+                var repository = JsonSerializer.DeserializeAsync<Repository>(await response.Content.ReadAsStreamAsync()).Result;
+
+                var fromMovies = repository.Data.Movies;
+                var toMovies = new List<Models.Movie>();
+                if (fromMovies is null || fromMovies.Count <= 0) return null;
+                foreach (var fromMovie in fromMovies)
+                {
+                    toMovies.Add(Utility.Converter.ConvertToResponse(fromMovie));
+                }
+
+                return toMovies;
             }
 
-            return toMovies;
+            return null;
         }
     }
 }

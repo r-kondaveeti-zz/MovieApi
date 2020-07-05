@@ -1,8 +1,22 @@
 {
   "version": 2,
-  "dgSpecHash": "q9PwX/TfASkcNB8VNoSjwVtd7dLattWQxfdimWbnjQWDX2sTiFUk5wqgLGofVaVNu49v39VNQVpfSoLkMZJiGg==",
+  "dgSpecHash": "fGBC14oDb07/1f9vfWYE6BFoEzdcL2rlzpW5LHE2Fu1Vpu1jHlo3MbasjBqTTW1jjsw1qq8ZxpUQGrsPsaNHvw==",
   "success": true,
   "projectFilePath": "/Users/odinsbeard/Desktop/Miscellaneous/MD.Backend/MD.Backend.Api.EnglishMovies/MD.Backend.Api.EnglishMovies.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/odinsbeard/.nuget/packages/microsoft.extensions.configuration/3.1.5/microsoft.extensions.configuration.3.1.5.nupkg.sha512",
+    "/Users/odinsbeard/.nuget/packages/microsoft.extensions.configuration.abstractions/3.1.5/microsoft.extensions.configuration.abstractions.3.1.5.nupkg.sha512",
+    "/Users/odinsbeard/.nuget/packages/microsoft.extensions.configuration.binder/3.1.5/microsoft.extensions.configuration.binder.3.1.5.nupkg.sha512",
+    "/Users/odinsbeard/.nuget/packages/microsoft.extensions.dependencyinjection/3.1.5/microsoft.extensions.dependencyinjection.3.1.5.nupkg.sha512",
+    "/Users/odinsbeard/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/3.1.5/microsoft.extensions.dependencyinjection.abstractions.3.1.5.nupkg.sha512",
+    "/Users/odinsbeard/.nuget/packages/microsoft.extensions.http/3.1.5/microsoft.extensions.http.3.1.5.nupkg.sha512",
+    "/Users/odinsbeard/.nuget/packages/microsoft.extensions.http.polly/3.1.5/microsoft.extensions.http.polly.3.1.5.nupkg.sha512",
+    "/Users/odinsbeard/.nuget/packages/microsoft.extensions.logging/3.1.5/microsoft.extensions.logging.3.1.5.nupkg.sha512",
+    "/Users/odinsbeard/.nuget/packages/microsoft.extensions.logging.abstractions/3.1.5/microsoft.extensions.logging.abstractions.3.1.5.nupkg.sha512",
+    "/Users/odinsbeard/.nuget/packages/microsoft.extensions.options/3.1.5/microsoft.extensions.options.3.1.5.nupkg.sha512",
+    "/Users/odinsbeard/.nuget/packages/microsoft.extensions.primitives/3.1.5/microsoft.extensions.primitives.3.1.5.nupkg.sha512",
+    "/Users/odinsbeard/.nuget/packages/polly/7.1.0/polly.7.1.0.nupkg.sha512",
+    "/Users/odinsbeard/.nuget/packages/polly.extensions.http/3.0.0/polly.extensions.http.3.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

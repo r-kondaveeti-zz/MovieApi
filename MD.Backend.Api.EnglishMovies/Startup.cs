@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Polly;
 
 namespace MD.Backend.Api.EnglishMovies
 {
@@ -28,7 +29,7 @@ namespace MD.Backend.Api.EnglishMovies
             services.AddHttpClient("Default", config =>
             {
                 config.BaseAddress = new Uri(Configuration["Services:Default"]);
-            });
+            }).AddTransientHttpErrorPolicy(p => p.WaitAndRetryAsync(5, _ => TimeSpan.FromMilliseconds(500)));
 
             services.AddScoped<Interfaces.IYtsService, Services.YtsService>();
 
