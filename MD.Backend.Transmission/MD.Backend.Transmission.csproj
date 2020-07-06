@@ -7,12 +7,13 @@
 
   <ItemGroup>
     <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
+    <Folder Include="RequestModels\" />
     <Folder Include="Logic\" />
     <Folder Include="ILogic\" />
     <Folder Include="IEngine\" />
     <Folder Include="Engine\" />
     <Folder Include="Db\" />
+    <Folder Include="ResponseModels\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Transmission.API.RPC" Version="2.1.2" />

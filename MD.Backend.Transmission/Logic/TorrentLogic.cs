@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Transmission.API.RPC;
 using Transmission.API.RPC.Entity;
 
@@ -11,7 +12,7 @@ namespace MD.Backend.Transmission.Logic
 
         public TorrentLogic(IEngine.ITorrentEngine torrentEngine)
         {
-            _client = new Client("http://localhost:9091/transmission/rpc", "Zt27a7zHJmfi6FNiNjM1EqQ3bAIbmcTetHuQzFjqflw6gd6J", "admin", "admin");
+            _client = new Client("http://localhost:9091/transmission/rpc", "08ZROoN6DCR0IPp5MxtHA9ccin0EH0Sascgb3LHOYeodAkXK", "admin", "admin");
             _torrentEngine = torrentEngine;
         }
 
@@ -22,49 +23,63 @@ namespace MD.Backend.Transmission.Logic
             var newTorrent = new NewTorrent();
             newTorrent.Filename = url;
             var info = _client.TorrentAdd(newTorrent);
-
-            //Db Code - Start
+            
             Db.Torrent torrent = new Db.Torrent();
             torrent.Id = new Guid(); torrent.MovieId = info.ID;
             torrent.MovieName = info.Name; torrent.Status = 4;
+            torrent.AddedOn = DateTime.Now;
 
             _torrentEngine.AddTorrent(torrent);
-            //Db Code - End
-
+            
             return info;
         }
 
-        public void RemoveTorrent(Db.Torrent torrent)
+        public IList<Db.Torrent> GetTorrents()
         {
-            _client.TorrentRemove(new int[] { torrent.MovieId }, true);
-
-            _torrentEngine.StopAndRemoveTorrent(torrent);
-
+           return _torrentEngine.GetTorrents();
         }
 
+        public (bool, string) StopAndRemoveTorrent(Guid torrentId, int movieId)
+        {
+            _client.TorrentRemove(new int[] { movieId }, true);
+
+            return _torrentEngine.StopAndRemoveTorrent(torrentId);
+        }
+
+        /*
+         * Not Used
+         */
         public void StartTorrent(object[] ids)
         {
             _client.TorrentStartNow(ids);
         }
 
-        public void StopTorrent(object[] ids)
+        public (bool, string) StopTorrent(Guid torrentId, int movieId)
         {
-            _client.TorrentStop(ids);
+            _client.TorrentStop(new Object[] { movieId });
+
+            return _torrentEngine.ModifyStatus(torrentId);
         }
 
-        public (int? rateDownload, int? eta, double? percentDone) TorrentStats(int[] ids)
+        /*
+         * Not Used
+         */
+        public (int? rateDownload, int? eta, double? percentDone, int? status) TorrentStats(int[] ids)
         {
-            string[] fields = { "rateDownload", "eta", "percentDone" };
+            string[] fields = { "rateDownload", "eta", "status", "percentDone" };
             var response = _client.TorrentGet(fields, ids);
-            if (response is null) return (null, null, null);
+            if (response is null) return (null, null, null, null);
 
             var torrents = response.Torrents;
 
-            if (torrents is null || torrents.Length == 0) return (null, null, null);
+            if (torrents is null || torrents.Length == 0) return (null, null, null, null);
 
-            return (torrents[0].RateDownload, torrents[0].ETA, torrents[0].PercentDone);
+            return (torrents[0].RateDownload, torrents[0].ETA, torrents[0].PercentDone, torrents[0].Status);
         }
 
+        /*
+         * Not Used
+         */
         public int? TorrentStatus(int[] ids)
         {
             string[] field = { "status" };

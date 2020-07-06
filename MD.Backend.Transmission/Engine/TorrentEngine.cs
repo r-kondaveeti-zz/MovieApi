@@ -31,15 +31,42 @@ namespace MD.Backend.Transmission.Engine
             return _dbContext.Torrents.ToList();
         }
 
-        public void StopAndRemoveTorrent(Db.Torrent torrent)
+        public (bool, string) ModifyStatus(Guid id)
         {
             try
             {
-                _dbContext.Torrents.Remove(torrent);
+                Db.Torrent torrent = _dbContext.Torrents.Find(id);
+                if (torrent is null) return (false, "Torrent Not Found");
+                torrent.Status = 6;
+
                 _dbContext.SaveChanges();
+
+                return (true, "Torrent Updated");
+            } catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+
+                return (false, ex.Message);
+            }
+        }
+
+        public (bool, string) StopAndRemoveTorrent(Guid id)
+        {
+            try
+            {
+                Db.Torrent torrent = _dbContext.Torrents.Find(id);
+                if (torrent is null) return (false, "Torrent Not Found");
+                _dbContext.Torrents.Remove(torrent);
+
+                _dbContext.SaveChanges();
+
+                return (true, "Torrent Deleted");
+
             } catch(Exception ex)
             {
                 Console.WriteLine(ex.Message);
+
+                return (false, ex.Message);
             }
 
         }

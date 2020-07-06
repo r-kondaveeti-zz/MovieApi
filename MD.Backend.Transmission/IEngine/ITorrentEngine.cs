@@ -11,7 +11,9 @@ namespace MD.Backend.Transmission.IEngine
         void AddTorrent(Db.Torrent torrent);
 
         //Remove Torrent
-        void StopAndRemoveTorrent(Db.Torrent torrent);
+        (bool, string) StopAndRemoveTorrent(Guid id);
+
+        (bool, string) ModifyStatus(Guid id);
 
     }
 }
