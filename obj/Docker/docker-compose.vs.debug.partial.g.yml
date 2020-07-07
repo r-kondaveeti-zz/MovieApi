@@ -1,0 +1,79 @@
+version: '3.4'
+
+services:
+  md.backend.api.englishmovies:
+    image: mdbackendapi:dev
+    container_name: MD.Backend.Api.EnglishMovies
+    build:
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "MD.Backend.Api.EnglishMovies"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      - NUGET_FALLBACK_PACKAGES=
+    volumes:
+      - /Users/odinsbeard/Desktop/Miscellaneous/MD.Backend/MD.Backend.Api.EnglishMovies:/app
+      - /Users/odinsbeard/Desktop/Miscellaneous/MD.Backend:/src
+      - /Users/odinsbeard/vsdbg/vs2017u5:/remote_debugger:rw
+      - /Users/odinsbeard/.nuget/packages/:/root/.nuget/packages:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /root/.nuget/packages  \"/app/bin/Debug/netcoreapp3.1/MD.Backend.Api.EnglishMovies.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true
+  md.backend.api.indianmovies:
+    image: mdbackendapi:dev
+    container_name: MD.Backend.Api.IndianMovies
+    build:
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "MD.Backend.Api.IndianMovies"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      - NUGET_FALLBACK_PACKAGES=
+    volumes:
+      - /Users/odinsbeard/Desktop/Miscellaneous/MD.Backend/MD.Backend.Api.IndianMovies:/app
+      - /Users/odinsbeard/Desktop/Miscellaneous/MD.Backend:/src
+      - /Users/odinsbeard/vsdbg/vs2017u5:/remote_debugger:rw
+      - /Users/odinsbeard/.nuget/packages/:/root/.nuget/packages:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /root/.nuget/packages  \"/app/bin/Debug/netcoreapp3.1/MD.Backend.Api.IndianMovies.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true
+
+  md.backend.transmission:
+    image: mdbackend:dev
+    container_name: MD.Backend.Transmission
+    build:
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "MD.Backend.Transmission"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      - NUGET_FALLBACK_PACKAGES=
+    volumes:
+      - /Users/odinsbeard/Desktop/Miscellaneous/MD.Backend/MD.Backend.Transmission:/app
+      - /Users/odinsbeard/Desktop/Miscellaneous/MD.Backend:/src
+      - /Users/odinsbeard/vsdbg/vs2017u5:/remote_debugger:rw
+      - /Users/odinsbeard/.nuget/packages/:/root/.nuget/packages:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /root/.nuget/packages  \"/app/bin/Debug/netcoreapp3.1/MD.Backend.Transmission.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true

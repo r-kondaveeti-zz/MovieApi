@@ -13,6 +13,7 @@ namespace MD.Backend.Transmission
     {
         public static void Main(string[] args)
         {
+
             CreateHostBuilder(args).Build().Run();
         }
 

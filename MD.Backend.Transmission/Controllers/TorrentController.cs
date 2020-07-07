@@ -1,12 +1,11 @@
 ﻿using System;
 using Microsoft.AspNetCore.Mvc;
-using Transmission.API.RPC;
 
 
 namespace MD.Backend.Transmission.Controllers
 {
     [ApiController]
-    [Route("torrent/")]
+    [Route("api/torrent/")]
     public class TorrentController: ControllerBase
     {
         private readonly ILogic.ITorrentLogic _torrentLogic;

@@ -11,6 +11,7 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("78d76a42-1fef-4e72-913b-fb0a29432bc2")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("MD.Backend.Api.EnglishMovies")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

@@ -1,0 +1,41 @@
+services:
+  md.backend.api.englishmovies:
+    build:
+      context: /Users/odinsbeard/Desktop/Miscellaneous/MD.Backend
+      dockerfile: MD.Backend.Api.EnglishMovies/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: mdbackendapi
+    ports:
+    - published: 6001
+      target: 80
+    volumes:
+    - /Users/odinsbeard/.aspnet/https:/root/.aspnet/https:ro
+    - /Users/odinsbeard/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
+  md.backend.api.indianmovies:
+    build:
+      context: /Users/odinsbeard/Desktop/Miscellaneous/MD.Backend
+      dockerfile: MD.Backend.Api.IndianMovies/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: mdbackendapi
+    ports:
+    - published: 6002
+      target: 80
+    volumes:
+    - /Users/odinsbeard/.aspnet/https:/root/.aspnet/https:ro
+    - /Users/odinsbeard/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
+  md.backend.transmission:
+    build:
+      context: /Users/odinsbeard/Desktop/Miscellaneous/MD.Backend
+      dockerfile: MD.Backend.Transmission/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: mdbackend
+    ports:
+    - published: 6005
+      target: 80
+    volumes:
+    - /Users/odinsbeard/.aspnet/https:/root/.aspnet/https:ro
+    - /Users/odinsbeard/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'

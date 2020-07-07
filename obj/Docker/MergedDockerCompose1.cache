@@ -1,0 +1,101 @@
+services:
+  md.backend.api.englishmovies:
+    build:
+      context: /Users/odinsbeard/Desktop/Miscellaneous/MD.Backend
+      dockerfile: MD.Backend.Api.EnglishMovies/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: MD.Backend.Api.EnglishMovies
+      target: base
+    container_name: MD.Backend.Api.EnglishMovies
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: ''
+    image: mdbackendapi:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/netcoreapp3.1/MD.Backend.Api.EnglishMovies.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - published: 6001
+      target: 80
+    tty: true
+    volumes:
+    - /Users/odinsbeard/Desktop/Miscellaneous/MD.Backend/MD.Backend.Api.EnglishMovies:/app:rw
+    - /Users/odinsbeard/vsdbg/vs2017u5:/remote_debugger:rw
+    - /Users/odinsbeard/.aspnet/https:/root/.aspnet/https:ro
+    - /Users/odinsbeard/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
+    - /Users/odinsbeard/.nuget/packages:/root/.nuget/packages:ro
+    - /Users/odinsbeard/Desktop/Miscellaneous/MD.Backend:/src:rw
+  md.backend.api.indianmovies:
+    build:
+      context: /Users/odinsbeard/Desktop/Miscellaneous/MD.Backend
+      dockerfile: MD.Backend.Api.IndianMovies/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: MD.Backend.Api.IndianMovies
+      target: base
+    container_name: MD.Backend.Api.IndianMovies
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: ''
+    image: mdbackendapi:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/netcoreapp3.1/MD.Backend.Api.IndianMovies.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - published: 6002
+      target: 80
+    tty: true
+    volumes:
+    - /Users/odinsbeard/Desktop/Miscellaneous/MD.Backend/MD.Backend.Api.IndianMovies:/app:rw
+    - /Users/odinsbeard/vsdbg/vs2017u5:/remote_debugger:rw
+    - /Users/odinsbeard/.aspnet/https:/root/.aspnet/https:ro
+    - /Users/odinsbeard/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
+    - /Users/odinsbeard/.nuget/packages:/root/.nuget/packages:ro
+    - /Users/odinsbeard/Desktop/Miscellaneous/MD.Backend:/src:rw
+  md.backend.transmission:
+    build:
+      context: /Users/odinsbeard/Desktop/Miscellaneous/MD.Backend
+      dockerfile: MD.Backend.Transmission/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: MD.Backend.Transmission
+      target: base
+    container_name: MD.Backend.Transmission
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: ''
+    image: mdbackend:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/netcoreapp3.1/MD.Backend.Transmission.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - published: 6005
+      target: 80
+    tty: true
+    volumes:
+    - /Users/odinsbeard/Desktop/Miscellaneous/MD.Backend/MD.Backend.Transmission:/app:rw
+    - /Users/odinsbeard/vsdbg/vs2017u5:/remote_debugger:rw
+    - /Users/odinsbeard/.aspnet/https:/root/.aspnet/https:ro
+    - /Users/odinsbeard/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
+    - /Users/odinsbeard/.nuget/packages:/root/.nuget/packages:ro
+    - /Users/odinsbeard/Desktop/Miscellaneous/MD.Backend:/src:rw
+version: '3.4'

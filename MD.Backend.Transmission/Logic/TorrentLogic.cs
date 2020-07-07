@@ -12,7 +12,7 @@ namespace MD.Backend.Transmission.Logic
 
         public TorrentLogic(IEngine.ITorrentEngine torrentEngine)
         {
-            _client = new Client("http://localhost:9091/transmission/rpc", "08ZROoN6DCR0IPp5MxtHA9ccin0EH0Sascgb3LHOYeodAkXK", "admin", "admin");
+            _client = new Client("http://192.168.86.122:9091/transmission/rpc", "bDnGYRsC094cjaXPLNHlYPX2r1fdunjy5qVSRS7gypEzEzXw", "admin", "admin");
             _torrentEngine = torrentEngine;
         }
 
@@ -61,9 +61,6 @@ namespace MD.Backend.Transmission.Logic
             return _torrentEngine.ModifyStatus(torrentId);
         }
 
-        /*
-         * Not Used
-         */
         public (int? rateDownload, int? eta, double? percentDone, int? status) TorrentStats(int[] ids)
         {
             string[] fields = { "rateDownload", "eta", "status", "percentDone" };
