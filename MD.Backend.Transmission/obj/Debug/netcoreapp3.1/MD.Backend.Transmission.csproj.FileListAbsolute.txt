@@ -1,8 +1,3 @@
-/Users/odinsbeard/Desktop/Miscellaneous/MD.Backend/MD.Backend.Transmission/obj/Debug/netcoreapp3.1/MD.Backend.Transmission.csprojAssemblyReference.cache
-/Users/odinsbeard/Desktop/Miscellaneous/MD.Backend/MD.Backend.Transmission/obj/Debug/netcoreapp3.1/MD.Backend.Transmission.AssemblyInfoInputs.cache
-/Users/odinsbeard/Desktop/Miscellaneous/MD.Backend/MD.Backend.Transmission/obj/Debug/netcoreapp3.1/MD.Backend.Transmission.AssemblyInfo.cs
-/Users/odinsbeard/Desktop/Miscellaneous/MD.Backend/MD.Backend.Transmission/obj/Debug/netcoreapp3.1/MD.Backend.Transmission.csproj.CoreCompileInputs.cache
-/Users/odinsbeard/Desktop/Miscellaneous/MD.Backend/MD.Backend.Transmission/obj/Debug/netcoreapp3.1/MD.Backend.Transmission.MvcApplicationPartsAssemblyInfo.cache
 /Users/odinsbeard/Desktop/Miscellaneous/MD.Backend/MD.Backend.Transmission/bin/Debug/netcoreapp3.1/appsettings.Development.json
 /Users/odinsbeard/Desktop/Miscellaneous/MD.Backend/MD.Backend.Transmission/bin/Debug/netcoreapp3.1/appsettings.json
 /Users/odinsbeard/Desktop/Miscellaneous/MD.Backend/MD.Backend.Transmission/bin/Debug/netcoreapp3.1/Properties/launchSettings.json
@@ -46,6 +41,11 @@
 /Users/odinsbeard/Desktop/Miscellaneous/MD.Backend/MD.Backend.Transmission/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.0/System.Runtime.Caching.dll
 /Users/odinsbeard/Desktop/Miscellaneous/MD.Backend/MD.Backend.Transmission/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.0/System.Runtime.Caching.dll
 /Users/odinsbeard/Desktop/Miscellaneous/MD.Backend/MD.Backend.Transmission/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
+/Users/odinsbeard/Desktop/Miscellaneous/MD.Backend/MD.Backend.Transmission/obj/Debug/netcoreapp3.1/MD.Backend.Transmission.csprojAssemblyReference.cache
+/Users/odinsbeard/Desktop/Miscellaneous/MD.Backend/MD.Backend.Transmission/obj/Debug/netcoreapp3.1/MD.Backend.Transmission.AssemblyInfoInputs.cache
+/Users/odinsbeard/Desktop/Miscellaneous/MD.Backend/MD.Backend.Transmission/obj/Debug/netcoreapp3.1/MD.Backend.Transmission.AssemblyInfo.cs
+/Users/odinsbeard/Desktop/Miscellaneous/MD.Backend/MD.Backend.Transmission/obj/Debug/netcoreapp3.1/MD.Backend.Transmission.csproj.CoreCompileInputs.cache
+/Users/odinsbeard/Desktop/Miscellaneous/MD.Backend/MD.Backend.Transmission/obj/Debug/netcoreapp3.1/MD.Backend.Transmission.MvcApplicationPartsAssemblyInfo.cache
 /Users/odinsbeard/Desktop/Miscellaneous/MD.Backend/MD.Backend.Transmission/obj/Debug/netcoreapp3.1/MD.Backend.Transmission.RazorTargetAssemblyInfo.cache
 /Users/odinsbeard/Desktop/Miscellaneous/MD.Backend/MD.Backend.Transmission/obj/Debug/netcoreapp3.1/MD.Backend.Transmission.csproj.CopyComplete
 /Users/odinsbeard/Desktop/Miscellaneous/MD.Backend/MD.Backend.Transmission/obj/Debug/netcoreapp3.1/staticwebassets/MD.Backend.Transmission.StaticWebAssets.Manifest.cache
