@@ -26,6 +26,13 @@ namespace MD.Backend.Api.EnglishMovies
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
+            {
+                builder.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader();
+            }));
+            
             services.AddHttpClient("Default", config =>
             {
                 config.BaseAddress = new Uri(Configuration["Services:Default"]);
@@ -44,6 +51,8 @@ namespace MD.Backend.Api.EnglishMovies
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors("MyPolicy");
+            
             app.UseHttpsRedirection();
 
             app.UseRouting();
