@@ -29,10 +29,27 @@ namespace MD.Backend.Api.EnglishMovies.Services
                 {
                     toMovies.Add(Utility.Converter.ConvertToResponse(fromMovie));
                 }
-
                 return toMovies;
             }
+            return null;
+        }
+        
+        public async Task<IList<Models.Movie>> GetMoviesUsingSearchTermAsync(string searchTerm)
+        {
+            var response = await _client.GetAsync($"api/v2/list_movies.json?query_term={searchTerm}");
+            if(response.IsSuccessStatusCode)
+            {
+                var repository = JsonSerializer.DeserializeAsync<Repository>(await response.Content.ReadAsStreamAsync()).Result;
 
+                var fromMovies = repository.Data.Movies;
+                var toMovies = new List<Models.Movie>();
+                if (fromMovies is null || fromMovies.Count <= 0) return null;
+                foreach (var fromMovie in fromMovies)
+                {
+                    toMovies.Add(Utility.Converter.ConvertToResponse(fromMovie));
+                }
+                return toMovies;
+            }
             return null;
         }
     }

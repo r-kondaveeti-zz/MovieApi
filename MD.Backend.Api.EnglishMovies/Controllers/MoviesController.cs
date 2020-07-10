@@ -26,5 +26,13 @@ namespace MD.Backend.Api.EnglishMovies.Controllers
            if (movies is null || movies.Count <= 0) return NotFound();
            return Ok(movies);
         }
+        
+        [HttpGet("{searchTerm}")]
+        public async Task<IActionResult> GetMoviesUsingGenreAsync(string searchTerm)
+        {
+            var movies = await _ytsService.GetMoviesUsingSearchTermAsync(searchTerm);
+            if (movies is null || movies.Count <= 0) return NotFound();
+            return Ok(movies);
+        }
     }
 }

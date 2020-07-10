@@ -1,26 +1,34 @@
-﻿<Properties StartupConfiguration="{59C556BA-7DF9-4EE8-8F76-766BEA93C966}|Default">
+﻿<Properties StartupConfiguration="{73FB41CE-8D3C-4D78-B8DC-A0FD83E4764D}|Default">
   <MonoDevelop.Ide.ItemProperties.MD.Backend.Api.EnglishMovies PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.ItemProperties.MD.Backend.Transmission PreferredExecutionTarget="/Applications/Safari.app" />
   <MonoDevelop.Ide.ItemProperties.MD.Backend.Api.IndianMovies PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="docker-compose.yml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MD.Backend.Api.EnglishMovies/Properties/launchSettings.json">
     <Files>
       <File FileName="MD.Backend.Transmission/Controllers/TorrentController.cs" Line="54" Column="82" />
-      <File FileName="MD.Backend.Transmission/RequestModels/AddTorrent.cs" Line="4" Column="18" />
-      <File FileName="MD.Backend.Transmission/Logic/TorrentLogic.cs" Line="15" Column="56" />
-      <File FileName="MD.Backend.Transmission/RequestModels/GetTorrentStats.cs" Line="6" Column="27" />
-      <File FileName="MD.Backend.Transmission/appsettings.json" Line="11" Column="47" />
-      <File FileName="MD.Backend.Api.IndianMovies/appsettings.Development.json" Line="1" Column="1" />
-      <File FileName="MD.Backend.Api.IndianMovies/Dockerfile" Line="1" Column="1" />
-      <File FileName="docker-compose.override.yml" Line="1" Column="1" />
+      <File FileName="MD.Backend.Transmission/RequestModels/AddTorrent.cs" />
+      <File FileName="MD.Backend.Api.EnglishMovies/Dockerfile" Line="11" Column="9" />
       <File FileName="docker-compose.yml" Line="1" Column="1" />
+      <File FileName="docker-compose.override.yml" Line="9" Column="1" />
+      <File FileName="MD.Backend.Api.EnglishMovies/appsettings.json" Line="1" Column="1" />
+      <File FileName="MD.Backend.Api.EnglishMovies/Startup.cs" Line="1" Column="1" />
+      <File FileName="MD.Backend.Api.EnglishMovies/Program.cs" Line="1" Column="1" />
+      <File FileName="MD.Backend.Api.EnglishMovies/appsettings.Development.json" Line="1" Column="1" />
+      <File FileName="MD.Backend.Api.EnglishMovies/Properties/launchSettings.json" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="MD.Backend" expanded="True">
             <Node name="docker-compose" expanded="True">
-              <Node name="docker-compose.yml" expanded="True" selected="True" />
+              <Node name="docker-compose.yml" expanded="True" />
+            </Node>
+            <Node name="MD.Backend.Api.EnglishMovies" expanded="True">
+              <Node name="Properties" expanded="True">
+                <Node name="launchSettings.json" selected="True" />
+              </Node>
             </Node>
             <Node name="MD.Backend.Api.IndianMovies" expanded="True" />
+            <Node name="MD.Backend.Api.IndianMovies.Tests" expanded="True" />
             <Node name="MD.Backend.Transmission" expanded="True">
               <Node name="Controllers" expanded="True" />
               <Node name="Logic" expanded="True" />
@@ -28,9 +36,6 @@
             </Node>
           </Node>
         </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
