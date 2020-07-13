@@ -23,7 +23,7 @@ namespace MD.Backend.Transmission.ILogic
         int? TorrentStatus(int[] ids);
 
         //Download Speed (for the torrents that have torrent status -- downloading)
-        (int? rateDownload, int? eta, double? percentDone, int? status) TorrentStats(int[] ids);
+        List<ResponseModels.TorrentStats> TorrentStats(int[] ids);
 
         //Gets all the torrents from the db
         IList<Db.Torrent> GetTorrents();

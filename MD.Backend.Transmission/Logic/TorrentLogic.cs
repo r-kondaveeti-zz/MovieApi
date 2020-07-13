@@ -12,7 +12,7 @@ namespace MD.Backend.Transmission.Logic
 
         public TorrentLogic(IEngine.ITorrentEngine torrentEngine)
         {
-            _client = new Client("http://192.168.86.122:9091/transmission/rpc", "bDnGYRsC094cjaXPLNHlYPX2r1fdunjy5qVSRS7gypEzEzXw", "admin", "admin");
+            _client = new Client("http://192.168.86.31:9091/transmission/rpc", "SyfjYX7Tt7n8kG1R6vZdBe7yvozTOcb1y5WvCF0sjLqoQuGs", "admin", "admin");
             _torrentEngine = torrentEngine;
         }
 
@@ -61,17 +61,33 @@ namespace MD.Backend.Transmission.Logic
             return _torrentEngine.ModifyStatus(torrentId);
         }
 
-        public (int? rateDownload, int? eta, double? percentDone, int? status) TorrentStats(int[] ids)
+        public List<ResponseModels.TorrentStats> TorrentStats(int[] ids)
         {
-            string[] fields = { "rateDownload", "eta", "status", "percentDone" };
+            List<ResponseModels.TorrentStats> list = new List<ResponseModels.TorrentStats>();
+            
+            string[] fields = { "name", "rateDownload", "eta", "status", "percentDone" };
             var response = _client.TorrentGet(fields, ids);
-            if (response is null) return (null, null, null, null);
+            if (response is null) return null;
 
             var torrents = response.Torrents;
 
-            if (torrents is null || torrents.Length == 0) return (null, null, null, null);
+            if (torrents is null || torrents.Length == 0) return null;
 
-            return (torrents[0].RateDownload, torrents[0].ETA, torrents[0].PercentDone, torrents[0].Status);
+            foreach(var torrent in torrents)
+            {
+                ResponseModels.TorrentStats torrentStats = new ResponseModels.TorrentStats
+                {
+                    Name = torrent.Name,
+                    ETA = torrent.ETA,
+                    RateDownload = torrent.RateDownload,
+                    Status = torrent.Status,
+                    PercentageDone = torrent.PercentDone
+                };
+
+                list.Add(torrentStats);
+            }
+
+            return list;
         }
 
         /*
@@ -81,9 +97,8 @@ namespace MD.Backend.Transmission.Logic
         {
             string[] field = { "status" };
             var response = _client.TorrentGet(field, ids);
-            if (response is null) return null;
 
-            var torrents = response.Torrents;
+            var torrents = response?.Torrents;
 
             if (torrents is null || torrents.Length == 0) return null;
 

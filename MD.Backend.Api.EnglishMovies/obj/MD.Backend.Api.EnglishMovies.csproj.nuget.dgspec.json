@@ -14,7 +14,7 @@
         "outputPath": "/Users/odinsbeard/Desktop/Miscellaneous/MD.Backend/MD.Backend.Api.EnglishMovies/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/odinsbeard/.nuget/NuGet/NuGet.Config"
+          "/Users/odinsbeard/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"

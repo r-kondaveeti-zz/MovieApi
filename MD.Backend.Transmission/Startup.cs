@@ -26,6 +26,13 @@ namespace MD.Backend.Transmission
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
+            {
+                builder.AllowAnyOrigin()
+                   .AllowAnyMethod()
+                   .AllowAnyHeader();
+            }));
+
             services.AddDbContext<Db.TorrentDbContext>(options =>
                 options.UseSqlServer(Configuration["Database:ConnectionString"]));
 
@@ -42,6 +49,8 @@ namespace MD.Backend.Transmission
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCors("MyPolicy");
 
             app.UseHttpsRedirection();
 

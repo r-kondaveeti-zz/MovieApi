@@ -50,15 +50,20 @@ namespace MD.Backend.Transmission.Controllers
             return Ok(torrents);
         }
 
-        [HttpPost("stats")]
-        public IActionResult GetTorrentStats([FromBody] RequestModels.GetTorrentStats torrentStats)
+        [HttpGet("stats")]
+        public IActionResult GetTorrentStats()
         {
-            ResponseModels.TorrentStats response = new ResponseModels.TorrentStats();
-            (response.RateDownload, response.ETA, response.PercentageDone, response.Status) = _torrentLogic.TorrentStats(new int[] { torrentStats.MovieId });
+            int[] ids = new int[1000];
+            for (int i = 0; i < 1000; i++)
+            {
+                ids[i] = i;
+            }
+            var torrentList  = _torrentLogic.TorrentStats(ids);
 
-            if (response.RateDownload is null || response.Status is null) return BadRequest();
+            if (torrentList is null) BadRequest();
 
-            return Ok(response);
+
+            return Ok(torrentList);
         }
 
         [HttpDelete]
