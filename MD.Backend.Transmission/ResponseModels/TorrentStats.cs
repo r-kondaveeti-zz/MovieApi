@@ -15,6 +15,6 @@ namespace MD.Backend.Transmission.ResponseModels
 
         public int Status { get; set; }
         
-        public TransmissionTorrentFiles directory { get; set; }
+        public string directory { get; set; }
     }
 }

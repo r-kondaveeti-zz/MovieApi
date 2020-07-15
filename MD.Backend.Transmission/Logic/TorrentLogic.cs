@@ -82,7 +82,7 @@ namespace MD.Backend.Transmission.Logic
                     RateDownload = torrent.RateDownload,
                     Status = torrent.Status,
                     PercentageDone = torrent.PercentDone,
-                    directory = torrent.Files.Length != 0 ? torrent.Files[0]: null 
+                    directory = torrent.Files.Length != 0 ? torrent.Files[0].Name: null 
                 };
 
                 list.Add(torrentStats);

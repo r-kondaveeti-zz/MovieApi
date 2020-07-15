@@ -2,7 +2,12 @@
   <MonoDevelop.Ide.ItemProperties.MD.Backend.Api.EnglishMovies PreferredExecutionTarget="/Applications/Safari.app" />
   <MonoDevelop.Ide.ItemProperties.MD.Backend.Transmission PreferredExecutionTarget="/Applications/Safari.app" />
   <MonoDevelop.Ide.ItemProperties.MD.Backend.Api.IndianMovies PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="MD.Backend.Transmission/Logic/TorrentLogic.cs">
+    <Files>
+      <File FileName="MD.Backend.Transmission/Utilities/ShellHelper.cs" Line="29" Column="2" />
+      <File FileName="MD.Backend.Transmission/ResponseModels/TorrentStats.cs" Line="6" Column="1" />
+      <File FileName="MD.Backend.Transmission/Logic/TorrentLogic.cs" Line="85" Column="78" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
@@ -11,6 +16,8 @@
               <Node name="Logic" expanded="True">
                 <Node name="TorrentLogic.cs" selected="True" />
               </Node>
+              <Node name="ResponseModels" expanded="True" />
+              <Node name="Utilities" expanded="True" />
             </Node>
           </Node>
         </State>
