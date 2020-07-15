@@ -65,7 +65,7 @@ namespace MD.Backend.Transmission.Logic
         {
             List<ResponseModels.TorrentStats> list = new List<ResponseModels.TorrentStats>();
             
-            string[] fields = { "name", "rateDownload", "eta", "status", "percentDone" };
+            string[] fields = { "name", "rateDownload", "eta", "status", "percentDone", "files" };
             var response = _client.TorrentGet(fields, ids);
             if (response is null) return null;
 
@@ -81,7 +81,8 @@ namespace MD.Backend.Transmission.Logic
                     ETA = torrent.ETA,
                     RateDownload = torrent.RateDownload,
                     Status = torrent.Status,
-                    PercentageDone = torrent.PercentDone
+                    PercentageDone = torrent.PercentDone,
+                    directory = torrent.Files.Length != 0 ? torrent.Files[0]: null 
                 };
 
                 list.Add(torrentStats);

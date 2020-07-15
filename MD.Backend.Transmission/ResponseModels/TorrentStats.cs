@@ -1,4 +1,6 @@
 ﻿using System;
+using Transmission.API.RPC.Entity;
+
 namespace MD.Backend.Transmission.ResponseModels
 {
     public class TorrentStats
@@ -12,5 +14,7 @@ namespace MD.Backend.Transmission.ResponseModels
         public double PercentageDone { get; set; }
 
         public int Status { get; set; }
+        
+        public TransmissionTorrentFiles directory { get; set; }
     }
 }
