@@ -31,6 +31,8 @@ namespace MD.Backend.Api.IndianMovies.Db
 
         public ICollection<Actor> Actors { get; set; }
 
+        public DateTime AddedOn { get; set; }
+
     }
 
     public class Language

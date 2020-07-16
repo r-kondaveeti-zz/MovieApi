@@ -37,5 +37,6 @@ namespace MD.Backend.Api.IndianMovies.Db
 		public DbSet<Actor> Actors { get; set; }
 
 		public DbSet<Director> Directors { get; set; }
+
 	}
 }

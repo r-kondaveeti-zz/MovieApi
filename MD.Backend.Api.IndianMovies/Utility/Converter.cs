@@ -24,7 +24,8 @@ namespace MD.Backend.Api.IndianMovies.Utility
                 Synopsis = fromMovie.Synopsis,
                 Year = fromMovie.Year,
                 Poster = fromMovie.Poster,
-                Torrent = fromMovie.Torrent
+                Torrent = fromMovie.Torrent,
+                AddedOn = fromMovie.AddedOn
             };
 
             if(fromMovie.Languages != null && fromMovie.Languages.Count != 0)

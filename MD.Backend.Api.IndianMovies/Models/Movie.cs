@@ -22,5 +22,7 @@ namespace MD.Backend.Api.IndianMovies.Models
         public ICollection<string> Actors { get; set; }
 
         public ICollection<string> Directors { get; set; }
+
+        public DateTime AddedOn { get; set; }
     }
 }
