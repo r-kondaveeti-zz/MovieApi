@@ -37,7 +37,7 @@ namespace MD.Backend.Transmission.Engine
             {
                 Db.Torrent torrent = _dbContext.Torrents.Find(id);
                 if (torrent is null) return (false, "Torrent Not Found");
-                torrent.Status = 6;
+                torrent.Status = 0;
 
                 _dbContext.SaveChanges();
 
