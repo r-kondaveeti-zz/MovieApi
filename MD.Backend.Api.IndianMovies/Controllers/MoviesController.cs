@@ -22,7 +22,7 @@ namespace MD.Backend.Api.IndianMovies.Controllers
             _moviesProvider = moviesProvider;
         }
 
-        [HttpGet("{title}")]
+        [HttpGet("search/indian/{title}")]
         public IActionResult GetMovie(string title)
         {
             title = title.ToLower();
