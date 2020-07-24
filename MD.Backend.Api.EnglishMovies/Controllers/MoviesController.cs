@@ -27,7 +27,7 @@ namespace MD.Backend.Api.EnglishMovies.Controllers
            return Ok(movies);
         }
         
-        [HttpGet("{searchTerm}")]
+        [HttpGet("search/english/{searchTerm}")]
         public async Task<IActionResult> GetMoviesUsingGenreAsync(string searchTerm)
         {
             var movies = await _ytsService.GetMoviesUsingSearchTermAsync(searchTerm);

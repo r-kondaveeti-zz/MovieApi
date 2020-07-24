@@ -1,13 +1,12 @@
-﻿<Properties StartupConfiguration="Multiple Projects">
+﻿<Properties StartupConfiguration="{8ABBB12C-3775-4B5F-95F5-EF2CDA9608D1}|Default">
   <MonoDevelop.Ide.ItemProperties.MD.Backend.Api.EnglishMovies PreferredExecutionTarget="/Applications/Safari.app" />
   <MonoDevelop.Ide.ItemProperties.MD.Backend.Transmission PreferredExecutionTarget="/Applications/Safari.app" />
   <MonoDevelop.Ide.ItemProperties.MD.Backend.Api.IndianMovies PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MD.Backend.Api.IndianMovies/Dockerfile">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MD.Backend.Api.IndianMovies/Controllers/MoviesController.cs">
     <Files>
-      <File FileName="MD.Backend.Api.IndianMovies/Startup.cs" Line="1" Column="1" />
-      <File FileName="MD.Backend.Api.IndianMovies/Program.cs" Line="1" Column="1" />
-      <File FileName="MD.Backend.Api.IndianMovies/Notes.txt" Line="1" Column="1" />
-      <File FileName="MD.Backend.Api.IndianMovies/Dockerfile" Line="10" Column="1" />
+      <File FileName="MD.Backend.Api.EnglishMovies/Properties/launchSettings.json" Line="1" Column="1" />
+      <File FileName="MD.Backend.Api.EnglishMovies/Controllers/MoviesController.cs" Line="30" Column="34" />
+      <File FileName="MD.Backend.Api.IndianMovies/Controllers/MoviesController.cs" Line="25" Column="19" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,21 +14,11 @@
           <Node name="MD.Backend" expanded="True">
             <Node name="MD.Backend.Api.EnglishMovies" expanded="True">
               <Node name="Controllers" expanded="True" />
-              <Node name="Interfaces" expanded="True" />
-              <Node name="Models" expanded="True" />
-              <Node name="Properties" expanded="True" />
             </Node>
             <Node name="MD.Backend.Api.IndianMovies" expanded="True">
-              <Node name="Db" expanded="True" />
-              <Node name="Models" expanded="True" />
-              <Node name="Providers" expanded="True" />
-              <Node name="Utility" expanded="True" />
-              <Node name="appsettings.json" expanded="True" />
-              <Node name="Dockerfile" selected="True" />
-            </Node>
-            <Node name="MD.Backend.Transmission" expanded="True">
-              <Node name="Engine" expanded="True" />
-              <Node name="Utilities" expanded="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="MoviesController.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>
@@ -37,7 +26,7 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <Debugger.DebugSourceFolders />
   <MonoDevelop.Ide.ItemProperties.docker-compose PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
