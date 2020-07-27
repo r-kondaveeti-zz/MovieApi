@@ -43,7 +43,7 @@ namespace MD.Backend.Api.IndianMovies.Providers
             var movies = _context.Movies.Where(m => m.Languages.Any(l => l.LanguageType == language)).
                 Include(m => m.Genres).Include(m => m.Actors).
                 Include(m => m.Languages).Include(m => m.Directors)
-                .Skip(pageNumber).Take(10).OrderByDescending(a => a.AddedOn).ToList();
+                .OrderByDescending(m => m.AddedOn).Skip(pageNumber).Take(10).ToList();
 
             if (movies.Count == 0) return null;
 
@@ -73,7 +73,7 @@ namespace MD.Backend.Api.IndianMovies.Providers
                 .Where(m => m.Year == year)
                 .Include(m => m.Genres).Include(m => m.Actors)
                 .Include(m => m.Languages).Include(m => m.Directors)
-                .Skip(pageNumber).Take(10).OrderByDescending(a => a.AddedOn).ToList();
+                .OrderByDescending(m => m.AddedOn).Skip(pageNumber).Take(10).ToList();
 
             if (movies.Count == 0) return null;
 

@@ -1,5 +1,6 @@
 /Users/odinsbeard/Desktop/Miscellaneous/MD.Backend/MD.Backend.Api.IndianMovies/bin/Debug/netcoreapp3.1/appsettings.Development.json
 /Users/odinsbeard/Desktop/Miscellaneous/MD.Backend/MD.Backend.Api.IndianMovies/bin/Debug/netcoreapp3.1/appsettings.json
+/Users/odinsbeard/Desktop/Miscellaneous/MD.Backend/MD.Backend.Api.IndianMovies/bin/Debug/netcoreapp3.1/MD.Backend/.yo-rc.json
 /Users/odinsbeard/Desktop/Miscellaneous/MD.Backend/MD.Backend.Api.IndianMovies/bin/Debug/netcoreapp3.1/Properties/launchSettings.json
 /Users/odinsbeard/Desktop/Miscellaneous/MD.Backend/MD.Backend.Api.IndianMovies/bin/Debug/netcoreapp3.1/MD.Backend.Api.IndianMovies.deps.json
 /Users/odinsbeard/Desktop/Miscellaneous/MD.Backend/MD.Backend.Api.IndianMovies/bin/Debug/netcoreapp3.1/MD.Backend.Api.IndianMovies.runtimeconfig.json
@@ -49,5 +50,3 @@
 /Users/odinsbeard/Desktop/Miscellaneous/MD.Backend/MD.Backend.Api.IndianMovies/obj/Debug/netcoreapp3.1/MD.Backend.Api.IndianMovies.dll
 /Users/odinsbeard/Desktop/Miscellaneous/MD.Backend/MD.Backend.Api.IndianMovies/obj/Debug/netcoreapp3.1/MD.Backend.Api.IndianMovies.pdb
 /Users/odinsbeard/Desktop/Miscellaneous/MD.Backend/MD.Backend.Api.IndianMovies/obj/Debug/netcoreapp3.1/MD.Backend.Api.IndianMovies.genruntimeconfig.cache
-/Users/odinsbeard/Desktop/Miscellaneous/MD.Backend/MD.Backend.Api.IndianMovies/obj/Debug/netcoreapp3.1/MD.Backend.Api.IndianMovies.csprojAssemblyReference.cache
-/Users/odinsbeard/Desktop/Miscellaneous/MD.Backend/MD.Backend.Api.IndianMovies/bin/Debug/netcoreapp3.1/MD.Backend/.yo-rc.json
