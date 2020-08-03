@@ -15,6 +15,8 @@ namespace MD.Backend.Transmission.ResponseModels
 
         public int Status { get; set; }
         
-        public string directory { get; set; }
+        public string Directory { get; set; }
+
+        public int Id { get; set; }
     }
 }

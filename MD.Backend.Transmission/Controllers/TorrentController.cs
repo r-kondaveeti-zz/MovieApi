@@ -53,8 +53,8 @@ namespace MD.Backend.Transmission.Controllers
         [HttpGet("stats")]
         public IActionResult GetTorrentStats()
         {
-            int[] ids = new int[1000];
-            for (int i = 0; i < 1000; i++)
+            int[] ids = new int[10000];
+            for (int i = 0; i < 10000; i++)
             {
                 ids[i] = i;
             }
