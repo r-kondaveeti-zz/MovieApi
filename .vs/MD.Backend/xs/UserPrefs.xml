@@ -2,7 +2,7 @@
   <MonoDevelop.Ide.ItemProperties.MD.Backend.Api.EnglishMovies PreferredExecutionTarget="/Applications/Safari.app" />
   <MonoDevelop.Ide.ItemProperties.MD.Backend.Transmission PreferredExecutionTarget="/Applications/Safari.app" />
   <MonoDevelop.Ide.ItemProperties.MD.Backend.Api.IndianMovies PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MD.Backend.Transmission/ILogic/ITorrentLogic.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MD.Backend.Transmission/Dockerfile">
     <Files>
       <File FileName="MD.Backend.Api.EnglishMovies/Properties/launchSettings.json" Line="1" Column="1" />
       <File FileName="MD.Backend.Api.EnglishMovies/Controllers/MoviesController.cs" />
@@ -17,6 +17,8 @@
       <File FileName="MD.Backend.Transmission/Logic/TorrentLogic.cs" Line="85" Column="90" />
       <File FileName="MD.Backend.Transmission/Db/Torrent.cs" Line="14" Column="41" />
       <File FileName="MD.Backend.Transmission/ResponseModels/TorrentStats.cs" Line="18" Column="24" />
+      <File FileName="MD.Backend.Api.IndianMovies/Dockerfile" Line="1" Column="1" />
+      <File FileName="MD.Backend.Transmission/Dockerfile" Line="1" Column="134" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -36,11 +38,10 @@
             <Node name="MD.Backend.Transmission" expanded="True">
               <Node name="Controllers" expanded="True" />
               <Node name="Db" expanded="True" />
-              <Node name="ILogic" expanded="True">
-                <Node name="ITorrentLogic.cs" selected="True" />
-              </Node>
+              <Node name="ILogic" expanded="True" />
               <Node name="Logic" expanded="True" />
               <Node name="ResponseModels" expanded="True" />
+              <Node name="Dockerfile" selected="True" />
             </Node>
           </Node>
         </State>
