@@ -1,3 +1,0 @@
-﻿Things to change
-
-    1. What if the values for the variables in the Db.Movie is much greater than the variable's size?
